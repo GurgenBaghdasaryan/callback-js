@@ -14,11 +14,11 @@ function htmlMessages() {
   }, 2000);
 }
 
-function foo2(name, callback) {
+function addName(name, callback) {
   setTimeout(() => {
     persons.push(name);
     callback();
   }, 4000);
 }
 
-foo2("Edik", htmlMessages);
+addName("Edik", htmlMessages);

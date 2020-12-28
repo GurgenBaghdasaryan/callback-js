@@ -1,19 +1,21 @@
+let addName = document.querySelector(".name");
+
 let persons = ["Aro", "Gugo"];
 
-function htmlMessages(callback) {
-  callback();
+function htmlMessages() {
+  let htmlMessage = "";
+
   persons.forEach((person) => {
-    let item = document.createElement("li");
-    item.innerText = person;
-    document.body.append(item);
+    htmlMessage += `
+      <li>${person}</li>
+     `;
   });
+  addName.innerHTML = htmlMessage;
 }
 
 function foo2() {
   persons.push("asasdas");
-  console.log(persons);
 }
 
-htmlMessages(function () {
-  setTimeout(foo2, 4000);
-});
+htmlMessages();
+setTimeout(foo2, 4000);
